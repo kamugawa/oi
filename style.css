@@ -1,0 +1,311 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Root / Variáveis */
+:root {
+    --base-color: #7c0e0e;
+    --base-color-second: #370303f1;
+    --base-color-alt: #3e0303;
+    --body-color: rgb(17, 1, 1);
+    --title-color: #fff;
+    --text-color: #e0e0e0;
+    --highlight-color: #ff6b6b;
+}
+
+/* Body */
+body {
+    font-family: 'Lora', serif; /* Para usar a fonte Lora */
+    font-family: 'Montserrat', sans-serif; /* Atualizando para a fonte Montserrat */
+    background-color: var(--body-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1, h2 {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif; /* Certifique-se de usar a mesma fonte nos títulos */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.text-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto horizontalmente */
+    justify-content: center; /* Centraliza o texto verticalmente */
+    height: 100%; /* Ajusta a altura para ocupar todo o espaço disponível */
+    padding: 30px; /* Adiciona padding ao redor do carrossel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.567); /* Sombra ao redor do carrossel */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #240808; /* Fundo branco para o conteúdo */
+    max-width: 800px; /* Largura máxima do carrossel */
+    margin: 20px auto; /* Margem lateral automática para centralização */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    cursor: grab; /* Define o cursor como mãozinha ao passar por cima */
+}
+
+.text-carousel:active {
+    cursor: grabbing; /* Muda para mãozinha fechada ao arrastar */
+}
+
+.text-carousel p {
+    font-size: 1.5em; /* Tamanho padrão do texto */
+    color: #333; /* Cor do texto */
+    margin: 10px 0; /* Espaçamento vertical entre os parágrafos */
+    text-align: center; /* Centraliza o texto */
+}
+
+.text-carousel h1 {
+    font-size: 2.9em; /* Tamanho do título */
+    color: #ff6b6b; /* Cor do título */
+}
+
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 768px) {
+    .text-carousel p {
+        font-size: 1.3em; /* Diminui o tamanho da fonte em telas menores */
+    }
+    
+    .text-carousel h1 {
+        font-size: 2.5em; /* Diminui o tamanho do título em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-carousel p {
+        font-size: 1.1em; /* Tamanho ainda menor em telas muito pequenas */
+    }
+    
+    .text-carousel h1 {
+        font-size: 2em; /* Tamanho do título ainda menor em telas muito pequenas */
+    }
+}
+
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 768px) {
+    .text-carousel p {
+        font-size: 1.3em; /* Diminui o tamanho da fonte em telas menores */
+    }
+    
+    .text-carousel h1 {
+        font-size: 2.5em; /* Diminui o tamanho do título em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-carousel p {
+        font-size: 1.1em; /* Tamanho ainda menor em telas muito pequenas */
+    }
+    
+    .text-carousel h1 {
+        font-size: 2em; /* Tamanho do título ainda menor em telas muito pequenas */
+    }
+}
+
+
+.text-carousel p {
+    display: none;
+    font-size: 1.5rem; /* Tamanho da fonte aumentado */
+    color: var(--text-color);
+    margin: 0 20px; /* Margem lateral para evitar que o texto encoste nas bordas */
+    cursor: pointer; /* Mudança do cursor para mãozinha ao passar sobre o texto */
+}
+
+
+.text-carousel p.active {
+    display: block;
+    animation: fade-in 1s ease-in-out;
+}
+
+
+.text-carousel p.active {
+    display: block;
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Controles do carrossel de texto */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    position: absolute; /* Permite que os botões fiquem sobre o texto */
+    bottom: 20px; /* Distância do fundo do carrossel */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.carousel-controls button {
+    background-color: var(--highlight-color);
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px; /* Aumentado o padding */
+    cursor: pointer;
+    border-radius: 25px; /* Bordas mais arredondadas */
+    font-size: 1.2em; /* Tamanho da fonte dos botões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.carousel-controls button:hover {
+    background-color: var(--base-color);
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.carousel-controls button:focus {
+    outline: none; /* Remove o contorno padrão ao focar no botão */
+    box-shadow: 0 0 0 2px var(--highlight-color); /* Sombra ao focar */
+}
+
+/* Player de música */
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui o espaço entre elementos */
+    margin: 15px 0; /* Espaçamento entre players */
+    background: linear-gradient(135deg, rgba(124, 14, 14, 0.9), rgba(55, 3, 3, 0.9)); /* Gradiente de fundo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column; /* Coloca título e artista um abaixo do outro */
+    margin-left: 15px; /* Espaço entre as informações e os botões */
+}
+
+.track-title {
+    font-weight: bold; /* Título em negrito */
+    color: #fff; /* Cor do texto do título */
+}
+
+.track-artist {
+    color: #ccc; /* Cor do texto do artista */
+    font-size: 0.9em; /* Tamanho da fonte do artista */
+}
+
+/* Estilo dos botões de controle */
+.controls {
+    display: flex; /* Flexbox para organizar os botões */
+    align-items: center; /* Alinha os botões ao centro */
+}
+
+.music-player button {
+    background-color: var(--highlight-color);
+    border: none;
+    color: #fff;
+    padding: 10px; /* Padding dos botões */
+    margin-left: 10px; /* Espaçamento entre botões */
+    border-radius: 50%; /* Botões redondos */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    display: flex; /* Flex para centralizar ícones */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Largura fixa para botões */
+    height: 40px; /* Altura fixa para botões */
+}
+
+/* Efeitos dos botões */
+.music-player button:hover {
+    background-color: var(--base-color); /* Cor do botão ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilo da barra de progresso */
+.progress-container {
+    flex-grow: 1; /* Permite que a barra de progresso ocupe o espaço restante */
+    margin-left: 20px; /* Espaçamento à esquerda da barra de progresso */
+}
+
+.progress-bar {
+    -webkit-appearance: none; /* Remove o estilo padrão */
+    appearance: none; /* Remove o estilo padrão */
+    width: 100%; /* Largura total */
+    height: 8px; /* Altura da barra */
+    background: rgba(91, 89, 89, 0.6); /* Cor de fundo da barra */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove o estilo padrão */
+    appearance: none; /* Remove o estilo padrão */
+    width: 16px; /* Largura do botão */
+    height: 16px; /* Altura do botão */
+    background: var(--highlight-color); /* Cor do botão */
+    border-radius: 50%; /* Botão redondo */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 16px; /* Largura do botão */
+    height: 16px; /* Altura do botão */
+    background: var(--highlight-color); /* Cor do botão */
+    border-radius: 50%; /* Botão redondo */
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .text-carousel p {
+        font-size: 1em; /* Tamanho da fonte reduzido */
+        line-height: 1.3em; /* Altura da linha reduzida */
+        margin: 15px 0; /* Margem reduzida */
+    }
+
+    .carousel-controls {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        align-items: center; /* Centraliza os botões */
+    }
+
+    .carousel-controls button {
+        padding: 10px; /* Aumenta o padding para maior área de clique */
+        font-size: 1.2em; /* Aumenta o tamanho da fonte para melhor legibilidade */
+        width: 40px; /* Largura maior para botões */
+        height: 40px; /* Altura maior para botões */
+        margin: 5px 0; /* Espaço entre os botões */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .text-carousel p {
+        font-size: 1.1em; /* Tamanho da fonte levemente reduzido */
+    }
+
+    .carousel-controls {
+        flex-direction: row; /* Mantém os botões lado a lado */
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    .carousel-controls button {
+        padding: 10px 15px; /* Ajuste de padding */
+        font-size: 1em; /* Tamanho da fonte ajustado */
+        margin: 0 5px; /* Espaçamento reduzido */
+    }
+}

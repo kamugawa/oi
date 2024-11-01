@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Texto e Imagem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Carrossel de Texto -->
+        <div class="text-carousel">
+            <p class="active">Texto 1: "A vida é uma jornada cheia de aventuras e lições. A cada passo que damos, encontramos novos desafios e oportunidades que moldam quem somos. É fundamental abraçar cada experiência, pois elas nos ensinam a valorizar as pequenas vitórias e a enfrentar os obstáculos com coragem."</p>
+            <p>Texto 2: "Cada momento é uma nova oportunidade de crescer e se reinventar. Às vezes, as dificuldades que encontramos pelo caminho podem parecer intransponíveis, mas são essas experiências que nos tornam mais fortes e resilientes. Devemos nos lembrar de que a beleza da vida muitas vezes está escondida nas adversidades."</p>
+            <p>Texto 3: "Descubra a beleza nas pequenas coisas que frequentemente passam despercebidas em nossa rotina. O aroma do café fresco pela manhã, o som dos pássaros cantando, e o calor do sol na pele podem trazer uma sensação de paz e felicidade. É essencial parar e apreciar esses momentos, pois eles são os verdadeiros tesouros da vida."</p>
+            <p>Texto 4: "Siga em frente, independentemente dos desafios que surgirem. A persistência é a chave para alcançar nossos objetivos. Quando nos deparamos com dificuldades, é importante lembrar que cada falha é uma oportunidade para aprender e melhorar. Nunca desista de seus sonhos e mantenha a fé em si mesmo, pois você é capaz de realizar grandes coisas."</p>
+           
+        </div>
+    </div>
+    
+     
+
+      <!-- Player de Música -->
+<!-- Player de Música -->
+<div class="music-player">
+    <audio id="audio1">
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="track-info">
+        <span class="track-title">Título da Música 1</span>
+        <span class="track-artist">Artista 1</span>
+    </div>
+    <div class="controls">
+        <button class="play" onclick="playAudio('audio1')"><i class="fas fa-play"></i></button>
+        <button class="pause" onclick="pauseAudio('audio1')"><i class="fas fa-pause"></i></button>
+        <button class="stop" onclick="stopAudio('audio1')"><i class="fas fa-stop"></i></button>
+    </div>
+    <div class="progress-container">
+        <input type="range" class="progress-bar" value="0" max="100" step="1" onchange="setAudioProgress('audio1', this.value)">
+    </div>
+</div>
+
+
+<!-- Player de Música -->
+<div class="music-player">
+    <audio id="audio1">
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="track-info">
+        <span class="track-title">Título da Música 1</span>
+        <span class="track-artist">Artista 1</span>
+    </div>
+    <div class="controls">
+        <button class="play" onclick="playAudio('audio1')"><i class="fas fa-play"></i></button>
+        <button class="pause" onclick="pauseAudio('audio1')"><i class="fas fa-pause"></i></button>
+        <button class="stop" onclick="stopAudio('audio1')"><i class="fas fa-stop"></i></button>
+    </div>
+    <div class="progress-container">
+        <input type="range" class="progress-bar" value="0" max="100" step="1" onchange="setAudioProgress('audio1', this.value)">
+    </div>
+</div>
+
+
+<!-- Player de Música -->
+<div class="music-player">
+    <audio id="audio1">
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="track-info">
+        <span class="track-title">Título da Música 1</span>
+        <span class="track-artist">Artista 1</span>
+    </div>
+    <div class="controls">
+        <button class="play" onclick="playAudio('audio1')"><i class="fas fa-play"></i></button>
+        <button class="pause" onclick="pauseAudio('audio1')"><i class="fas fa-pause"></i></button>
+        <button class="stop" onclick="stopAudio('audio1')"><i class="fas fa-stop"></i></button>
+    </div>
+    <div class="progress-container">
+        <input type="range" class="progress-bar" value="0" max="100" step="1" onchange="setAudioProgress('audio1', this.value)">
+    </div>
+</div>
+
+
+    </div>
+</body>
+</html>
